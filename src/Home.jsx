@@ -1,6 +1,8 @@
 import React, { useState, useContext} from 'react';
 import { AuthContext } from './AuthContext';
 import { Link } from 'react-router-dom';
+import cabeza from '../imagen/cabeza.png';
+
 
 const Home = () => {
     const { isLoggedIn } = useContext(AuthContext);
