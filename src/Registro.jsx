@@ -73,7 +73,7 @@ const Registro = () => {
             <img  src={cabeza} alt="" />
             <nav>
                 <ul class="barra">
-                    <li class="barra_"><a href="secretaria.html">Inicio</a></li>
+                    <li class="barra_"><a href="/">Inicio</a></li>
                     <li class="barra_"><a href="#"></a></li>
                     <li class="barra_"><a href="#"></a></li>
                     <li class="barra_"><a href="#"></a></li>
