@@ -5,6 +5,11 @@ import cabeza from '../imagen/cabeza.png';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { AuthContext } from './AuthContext';
+import logo from '../imagen/logo.png';
+import facebook from '../imagen/facebook.png';
+import twitter from '../imagen/twitter.png';
+import instagram from '../imagen/instagram.png';
+
 
 const MySwal = withReactContent(Swal);
 
@@ -36,8 +41,8 @@ const InicioSesion = () => {
     };
 
     const verificarUsuarioRegistrado = (email, password) => {
-        const usuarioRegistrado = JSON.parse(localStorage.getItem(email));
-        if (usuarioRegistrado && usuarioRegistrado.password === password) {
+        const usuarioRegistrado = JSON.parse(localStorage.getItem('usuario'));
+        if (usuarioRegistrado && usuarioRegistrado.email === email && usuarioRegistrado.password === password) {
             mostrarToast('Inicio de sesión exitoso', 'success');
             setIsLoggedIn(true);
             navigate('/'); // Redirige al usuario a la página de inicio
@@ -45,6 +50,7 @@ const InicioSesion = () => {
             mostrarToast('Correo o contraseña incorrecta', 'error');
         }
     };
+    
 
     const submitForm = () => {
         const { email, password } = credenciales;
@@ -109,23 +115,29 @@ const InicioSesion = () => {
             </div>
          </main>
 
-            <footer className="footer">
-                <div className="contenido-footer">
+                    <footer className="footer">
+                    <div className="contenido-footer">
                     <div className="logo">
-                        <img src="imagen/logo.png" alt="Logo de la empresa" />
+                        <img src={logo} alt="Logo de la empresa" />
                     </div>
                     <div className="redes-sociales">
-                        <a href="https://www.facebook.com/UleamEc" className="red-social"><img src="imagen/facebook.png" alt="Logo de Facebook" /></a>
-                        <a href="https://twitter.com/UleamEcuador" className="red-social"><img src="imagen/twitter.png" alt="Logo de Twitter" /></a>
-                        <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social"><img src="imagen/instagram.png" alt="Logo de Instagram" /></a>
+                        <a href="https://www.facebook.com/UleamEc" className="red-social">
+                        <img src={facebook} alt="Logo de Facebook" />
+                        </a>
+                        <a href="https://twitter.com/UleamEcuador" className="red-social">
+                        <img src={twitter} alt="Logo de Twitter" />
+                        </a>
+                        <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social">
+                        <img src={instagram} alt="Logo de Instagram" />
+                        </a>
                     </div>
-                </div>
-                <div className="derechos-autor">
+                    </div>
+                    <div className="derechos-autor">
                     ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí
                     Dirección: Av. Circunvalación - Vía a San Mateo
                     Manta - Manabí - Ecuador
-                </div>
-            </footer>
+                    </div>
+                </footer>
 
             </div>
         </>
