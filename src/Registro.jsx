@@ -2,6 +2,10 @@ import React, { useState, useContext} from 'react';
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './Css/registro.css';
 import cabeza from '../imagen/cabeza.png';
+import logo from '../imagen/logo.png';
+import facebook from '../imagen/facebook.png';
+import twitter from '../imagen/twitter.png';
+import instagram from '../imagen/instagram.png';
 
 const Registro = () => {
     const [usuario, setUsuario] = useState({
@@ -62,7 +66,7 @@ const Registro = () => {
             alert("Registro exitoso");
                 // Almacenar usuario en localStorage
                 localStorage.setItem('usuario', JSON.stringify(usuario));
-                 navigate('/login'); // Redirige al usuario a la página de inicio
+                navigate('/login'); // Redirige al usuario a la página de inicio
 
         }
     };
@@ -135,19 +139,25 @@ const Registro = () => {
             </main>
             <footer className="footer">
                 <div className="contenido-footer">
-                    <div className="logo">
-                        <img src="imagen/logo.png" alt="Logo de la empresa" />
-                    </div>
-                    <div className="redes-sociales">
-                        <a href="https://www.facebook.com/UleamEc" className="red-social"><img src="imagen/facebook.png" alt="Logo de Facebook" /></a>
-                        <a href="https://twitter.com/UleamEcuador" className="red-social"><img src="imagen/twitter.png" alt="Logo de Twitter" /></a>
-                        <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social"><img src="imagen/instagram.png" alt="Logo de Instagram" /></a>
-                    </div>
+                <div className="logo">
+                    <img src={logo} alt="Logo de la empresa" />
+                </div>
+                <div className="redes-sociales">
+                    <a href="https://www.facebook.com/UleamEc" className="red-social">
+                    <img src={facebook} alt="Logo de Facebook" />
+                    </a>
+                    <a href="https://twitter.com/UleamEcuador" className="red-social">
+                    <img src={twitter} alt="Logo de Twitter" />
+                    </a>
+                    <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social">
+                    <img src={instagram} alt="Logo de Instagram" />
+                    </a>
+                </div>
                 </div>
                 <div className="derechos-autor">
-                    ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí
-                    Dirección: Av. Circunvalación - Vía a San Mateo
-                    Manta - Manabí - Ecuador
+                ULEAM © Copyright 2020, Todos los derechos reservados - Universidad Laica Eloy Alfaro de Manabí
+                Dirección: Av. Circunvalación - Vía a San Mateo
+                Manta - Manabí - Ecuador
                 </div>
             </footer>
         </div>
