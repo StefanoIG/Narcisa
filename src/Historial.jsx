@@ -3,6 +3,10 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { Link } from 'react-router-dom';
 import cabeza from '../imagen/cabeza.png';
+import logo from '../imagen/logo.png';
+import facebook from '../imagen/facebook.png';
+import twitter from '../imagen/twitter.png';
+import instagram from '../imagen/instagram.png';
 
 const Historial = () => {
   // Estado para almacenar la lista de citas
@@ -71,12 +75,18 @@ const Historial = () => {
       <footer className="footer">
         <div className="contenido-footer">
           <div className="logo">
-            <img src="imagen/logo.png" alt="Logo de la empresa" />
+            <img src={logo} alt="Logo de la empresa" />
           </div>
           <div className="redes-sociales">
-            <a href="https://www.facebook.com/UleamEc" className="red-social"><img src="imagen/facebook.png" alt="Logo de Facebook" /></a>
-            <a href="https://twitter.com/UleamEcuador" className="red-social"><img src="imagen/twitter.png" alt="Logo de Twitter" /></a>
-            <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social"><img src="imagen/instagram.png" alt="Logo de Instagram" /></a>
+            <a href="https://www.facebook.com/UleamEc" className="red-social">
+              <img src={facebook} alt="Logo de Facebook" />
+            </a>
+            <a href="https://twitter.com/UleamEcuador" className="red-social">
+              <img src={twitter} alt="Logo de Twitter" />
+            </a>
+            <a href="https://www.instagram.com/uleam_ecuador_oficial/" className="red-social">
+              <img src={instagram} alt="Logo de Instagram" />
+            </a>
           </div>
         </div>
         <div className="derechos-autor">
